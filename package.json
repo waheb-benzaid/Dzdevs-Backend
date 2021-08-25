@@ -1,0 +1,41 @@
+{
+  "name": "dz-devs",
+  "version": "1.0.0",
+  "description": "network to all agerian developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waheb-benzaid/dz-devs.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "react",
+    "MERN"
+  ],
+  "author": "Wahéb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waheb-benzaid/dz-devs/issues"
+  },
+  "homepage": "https://github.com/waheb-benzaid/dz-devs#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  }
+}
