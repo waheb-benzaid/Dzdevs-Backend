@@ -1,7 +1,7 @@
 {
   "name": "dz-devs",
   "version": "1.0.0",
-  "description": "network to all agerian developers",
+  "description": "network to all algerian developers",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
