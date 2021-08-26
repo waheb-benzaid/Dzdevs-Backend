@@ -1,3 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://waheb:EzenMgxhrWtUq3W@dzdevscluster.fu3xn.mongodb.net/dzdevsDB?retryWrites=true&w=majority"
+    "mongoURI" : "mongodb+srv://waheb:EzenMgxhrWtUq3W@dzdevscluster.fu3xn.mongodb.net/dzdevsDB?retryWrites=true&w=majority",
+    "jwtSecret" : "mysecrettoken"
 }
