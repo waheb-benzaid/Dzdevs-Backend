@@ -149,10 +149,33 @@ router.get("/user/:user_id", async (req, res) => {
       user: req.params.user_id,
     }).populate("user", ["name", "avatar"])
     if (!profile) {
-      return res.status(400).json({ msg: "there is no profile for this user" })
+      return res.status(400).json({ msg: "Profile not found" })
     }
 
     res.json(profile)
+  } catch (err) {
+    console.log(err.message)
+    if (err.kind === "ObjectId") {
+      //if we tap an Id which not exists, the catch will work .
+      //so we can test if there is a problem in the user Id, if it is , we can return Profile not found instead of server error
+      return res.status(400).json({ msg: "Profile not found" })
+    }
+    res.status(500).send("server error")
+  }
+})
+
+// @route DELETE api/profile
+// @desc Delete profil, user and posts
+// @access private
+router.delete("/", auth, async (req, res) => {
+  try {
+    // @todo - remove users posts
+    // Remove profile
+    await Profile.findOneAndRemove({ user: req.user.id })
+    //Remove user
+    await User.findOneAndRemove({ _id: req.user.id })
+
+    res.json({ msg: "user deleted" })
   } catch (err) {
     console.log(err.message)
     res.status(500).send("server error")
