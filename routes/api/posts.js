@@ -76,7 +76,7 @@ router.delete("/:id", auth, async (req, res) => {
       return res.status(404).json({ msg: "post is not found" })
     }
 
-    //Check if the user does not match th the user logged in
+    //Check if the user does not match the user logged in
     if (post.user.toString() !== req.params.id) {
       return res.status(401).json({ msg: "User not authorized" })
     }
