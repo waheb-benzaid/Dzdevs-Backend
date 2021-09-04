@@ -1,4 +1,8 @@
 {
     "mongoURI" : "mongodb+srv://waheb:EzenMgxhrWtUq3W@dzdevscluster.fu3xn.mongodb.net/dzdevsDB?retryWrites=true&w=majority",
-    "jwtSecret" : "mysecrettoken"
+    "jwtSecret" : "mysecrettoken",
+    "githubClientId":"fa5f72ceaf406ee3f80d",
+    "githubSecret":"25f7fdc441a69761c7028b8b0cab54e5796abde8",
+    "githubUsername":"waheb-benzaid",
+    "githubToken":"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"
 }
